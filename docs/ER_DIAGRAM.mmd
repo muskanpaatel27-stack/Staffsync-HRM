@@ -1,0 +1,20 @@
+erDiagram
+    EMPLOYEE ||--o{ LEAVE : requests
+    EMPLOYEE {
+        ObjectId _id PK
+        string name
+        string email UK
+        string department
+        string role
+        string status
+        date joiningDate
+    }
+    LEAVE {
+        ObjectId _id PK
+        ObjectId employee FK
+        string leaveType
+        date startDate
+        date endDate
+        string reason
+        string status
+    }

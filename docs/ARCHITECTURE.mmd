@@ -1,0 +1,10 @@
+flowchart TD
+    A[Admin / Browser] --> B[React Frontend]
+    B -->|HTTP JSON REST requests| C[Express.js API]
+    C --> D[Route handlers / validation]
+    D --> E[Mongoose Models]
+    E --> F[(MongoDB Database)]
+    F --> E
+    E --> D
+    D --> C
+    C -->|JSON response| B
